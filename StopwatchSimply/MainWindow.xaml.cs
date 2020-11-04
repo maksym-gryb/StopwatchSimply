@@ -38,8 +38,6 @@ namespace StopwatchSimply
             this.Deactivated += Window_Deactivated;
             this.Topmost = true;
 
-            //myDispatcherTimer.Start();
-
             flashDispatcherTimer = new System.Windows.Threading.DispatcherTimer();
             flashDispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 500);
             flashDispatcherTimer.Tick += Flashing;
@@ -54,17 +52,11 @@ namespace StopwatchSimply
         private void UpdateClock()
         {
             stopwatch_display.Text = String.Format("{0:00}:{1:00}:{2:00}", timespan.Hours, timespan.Minutes, timespan.Seconds);
-
         }
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             Close();
-        }
-
-        void Rectangle_PreviewMouseDown(object sender, EventArgs e)
-        {
-            //
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
