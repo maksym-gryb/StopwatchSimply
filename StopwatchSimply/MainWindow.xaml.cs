@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -185,7 +186,9 @@ namespace StopwatchSimply
 
         private void FlashingWhenPausedToggle(object sender, EventArgs e)
         {
-            flashing_when_paused = !flashing_when_paused;
+            var checkbox = sender as CheckBox;
+
+            flashing_when_paused = checkbox.IsChecked ?? true;
         }
     }
 }
