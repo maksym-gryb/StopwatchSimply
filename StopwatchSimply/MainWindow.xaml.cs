@@ -190,5 +190,16 @@ namespace StopwatchSimply
 
             flashing_when_paused = checkbox.IsChecked ?? true;
         }
+
+        private void ShowHelpWindow(object sender, EventArgs e)
+        {
+            ShowHelpWindow();
+        }
+
+        private void ShowHelpWindow()
+        {
+            HelpWindow helpWindow = new HelpWindow();
+            helpWindow.Show();
+        }
     }
 }

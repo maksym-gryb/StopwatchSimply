@@ -19,6 +19,7 @@
             <MenuItem Header="Reset" Click="ResetTimer"/>
             <CheckBox Name="AlwaysOnTop_Checkbox" Checked="AlwaysOnTop_CheckedChanged" Unchecked="AlwaysOnTop_CheckedChanged" IsChecked="True">Always on Top</CheckBox>
             <CheckBox Name="FlashingWhenPaused_Checkbox" Checked="FlashingWhenPausedToggle" Unchecked="FlashingWhenPausedToggle" IsChecked="True">Flash When Paused</CheckBox>
+            <MenuItem Header="Help" Click="ShowHelpWindow"/>
             <MenuItem Header="Exit" Click="CloseButton_Click"/>
         </ContextMenu>
     </Window.Resources>
